@@ -25,21 +25,21 @@ function generateGroups()
 end
 
 function generateAppearances()
-    local White = { id = 1, R = 255, G = 255, B = 255, GelCategory = 'MA', GelName = 'white' }
-    local CTO = { id = 2, R = 255, G = 210, B = 159, GelCategory = "Cinegel", GelName = "Roscosun 1/2 CTO" }
-    local CTB = { id = 3, R = 173, G = 255, B = 246, GelCategory = "Cinegel", GelName = "Half Blue CTB" }
-    local Red = { id = 4, R = 255, G = 0, B = 0, GelCategory = "MA", GelName = "red" }
-    local Orange = { id = 5, R = 255, G = 127, B = 0, GelCategory = "MA", GelName = "orange" }
-    local Yellow = { id = 6, R = 255, G = 255, B = 0, GelCategory = "MA", GelName = "yellow" }
+    local White     = { id = 1, R = 255, G = 255, B = 255, GelCategory = 'MA', GelName = 'white' }
+    local CTO       = { id = 2, R = 255, G = 210, B = 159, GelCategory = "Cinegel", GelName = "Roscosun 1/2 CTO" }
+    local CTB       = { id = 3, R = 173, G = 255, B = 246, GelCategory = "Cinegel", GelName = "Half Blue CTB" }
+    local Red       = { id = 4, R = 255, G = 0, B = 0, GelCategory = "MA", GelName = "red" }
+    local Orange    = { id = 5, R = 255, G = 127, B = 0, GelCategory = "MA", GelName = "orange" }
+    local Yellow    = { id = 6, R = 255, G = 255, B = 0, GelCategory = "MA", GelName = "yellow" }
     local FernGreen = { id = 7, R = 0, G = 255, B = 0, GelCategory = "MA", GelName = "Fern Green" }
-    local Green = { id = 8, R = 0, G = 127, B = 0, GelCategory = "MA", GelName = "Green" }
-    local SeaGreen = { id = 9, R = 0, G = 255, B = 127, GelCategory = "MA", GelName = "Sea Green" }
-    local Cyan = { id = 10, R = 0, G = 255, B = 255, GelCategory = "MA", GelName = "Cyan" }
-    local Lavender = { id = 11, R = 127, G = 0, B = 255, GelCategory = "MA", GelName = "Lavender" }
-    local Blue = { id = 12, R = 0, G = 0, B = 255, GelCategory = "MA", GelName = "Blue" }
-    local Violet = { id = 13, R = 127, G = 0, B = 255, GelCategory = "MA", GelName = "Violet" }
-    local Magenta = { id = 14, R = 255, G = 0, B = 255, GelCategory = "MA", GelName = "Magenta" }
-    local Pink = { id = 15, R = 255, G = 0, B = 127, GelCategory = "MA", GelName = "Pink" }
+    local Green     = { id = 8, R = 0, G = 127, B = 0, GelCategory = "MA", GelName = "Green" }
+    local SeaGreen  = { id = 9,  R = 0, G = 255, B = 127, GelCategory = "MA", GelName = "Sea Green" }
+    local Cyan      = { id = 10, R = 0, G = 255, B = 255, GelCategory = "MA", GelName = "Cyan" }
+    local Lavender  = { id = 11, R = 127, G = 0, B = 255, GelCategory = "MA", GelName = "Lavender" }
+    local Blue      = { id = 12, R = 0, G = 0, B = 255, GelCategory = "MA", GelName = "Blue" }
+    local Violet    = { id = 13, R = 127, G = 0, B = 255, GelCategory = "MA", GelName = "Violet" }
+    local Magenta   = { id = 14, R = 255, G = 0, B = 255, GelCategory = "MA", GelName = "Magenta" }
+    local Pink      = { id = 15, R = 255, G = 0, B = 127, GelCategory = "MA", GelName = "Pink" }
 
     generateColorAppearance('White', White)
     generateColorAppearance('CTO', CTO)
