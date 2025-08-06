@@ -1,0 +1,11 @@
+function main()
+    --Clean all sequence
+      Allowed = (Confirm("Cleaning Show", "Do you want to clean sequence 1 to 99 ?", nil, true))
+
+    if Allowed then
+        Printf ("Sequence 1 to 99 deleted")
+    else
+        Printf ("You have no balls to delete sequence 1 to 99")
+    end
+end
+return main
