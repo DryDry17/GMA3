@@ -1,16 +1,14 @@
 
 --This plugin clean the show before every start.
 
-
-
-
 function main()
     function DeleteSequence1to99()
         --Clean all sequence
         Allowed = (Confirm("Cleaning Show", "Do you want to clean sequence 1 to 99 ?", nil, true))
     
         if Allowed then
-            
+            Cmd("ClearAll")
+            Cmd("Del Seq 1 thru 99")
             Printf ("Sequence 1 to 99 deleted")
         else
             Printf ("You have no balls to delete sequence 1 to 99")
@@ -18,9 +16,12 @@ function main()
     
     end
 
+
+
+--Step 1: Delete all sequence 1 to 99
     DeleteSequence1to99()
 
-    
+
 end
 return main
 
