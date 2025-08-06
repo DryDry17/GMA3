@@ -9,7 +9,7 @@ function main()
         if Allowed then
             Cmd("ClearAll")
             Cmd("Delete Sequence 1 Thru 99")
-            Printf ("Sequence 1 to 99 deleted")
+            Printf ("Sequence 1 to 99 deleted /NoConfirmation")                                                 --"NoConfirmation" is used to avoid the confirmation message if the sequence is full
         else
             Confirm("Cleaning Show", "!!! You have no balls to delete sequence 1 to 99 !!!", nil, false)
             Printf ("You have no balls to delete sequence 1 to 99")
