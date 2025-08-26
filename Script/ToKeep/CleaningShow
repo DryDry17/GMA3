@@ -14,7 +14,6 @@ function main()
             Confirm("Cleaning Show", "!!! You have no balls to delete sequence 1 to 99 !!!", nil, false)
             Printf ("You have no balls to delete sequence 1 to 99")
         end
-    
     end
 
 
