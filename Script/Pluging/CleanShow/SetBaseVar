@@ -1,0 +1,8 @@
+function main()
+
+    for i = 1, 5 do 
+     Cmd("SetGlobalVariable "Pr1Name" "Pr i " ")
+    end
+end
+
+return main
