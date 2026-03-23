@@ -15,18 +15,18 @@ local function main()
     -- Récupère la séquence cible
     local seq = ShowData().DataPools.Default.Sequences[SEQ_NUMBER]
     if not seq then
-        ErrEcho("Cue→Macro : Séquence " .. SEQ_NUMBER .. " introuvable !")
+        ErrEcho("Cue->Macro : Sequence " .. tostring(SEQ_NUMBER) .. " introuvable !")
         return
     end
 
     -- Récupère la macro cible
     local macro = ShowData().DataPools.Default.Macros[MACRO_NUMBER]
     if not macro then
-        ErrEcho("Cue→Macro : Macro " .. MACRO_NUMBER .. " introuvable !")
+        ErrEcho("Cue->Macro : Macro " .. tostring(MACRO_NUMBER) .. " introuvable !")
         return
     end
 
-    Echo("Cue→Macro : Démarré — Séquence " .. SEQ_NUMBER .. " → Macro " .. MACRO_NUMBER)
+    Echo("Cue->Macro : Demarre - Sequence " .. tostring(SEQ_NUMBER) .. " -> Macro " .. tostring(MACRO_NUMBER))
 
     -- ── État interne ────────────────────────────────────────────
     local prevCueNo = nil
@@ -36,7 +36,7 @@ local function main()
     local function findActiveCue(cueNo)
         local cues = seq.Cues
         if not cues then return nil end
-        for i = 0, cues.Count() - 1 do
+        for i = 0, Obj.count(cues) - 1 do
             local cue = cues[i]
             if cue and cue.No == cueNo then
                 return cue
@@ -61,10 +61,10 @@ local function main()
                         pcall(function()
                             macro.Appearance = app
                         end)
-                        Echo("Cue→Macro : Cue " .. tostring(currCueNo) .. " → apparence appliquée à la Macro " .. MACRO_NUMBER)
+                        Echo("Cue->Macro : Cue " .. tostring(currCueNo) .. " -> apparence appliquee a la Macro " .. tostring(MACRO_NUMBER))
                     end
                 else
-                    Echo("Cue→Macro : Cue " .. tostring(currCueNo) .. " introuvable dans la séquence.")
+                    Echo("Cue->Macro : Cue " .. tostring(currCueNo) .. " introuvable dans la sequence.")
                 end
             end
 

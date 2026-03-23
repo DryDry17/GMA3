@@ -28,7 +28,7 @@ local function main()
     local function findRunningSequence()
         local sequences = ShowData().DataPools.Default.Sequences
         if not sequences then return nil end
-        for i = 0, sequences.Count() - 1 do
+        for i = 0, Obj.count(sequences) - 1 do
             local seq = sequences[i]
             if seq and asActivePlayback(seq) then
                 return seq
