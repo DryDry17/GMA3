@@ -24,9 +24,23 @@ local function main()
     local prevAppearance = nil
     -- ───────────────────────────────────────────────────────────
 
+    -- ── Trouve la séquence avec un Cue actif ────────────────────
+    local function findRunningSequence()
+        local sequences = ShowData().DataPools.Default.Sequences
+        if not sequences then return nil end
+        for i = 0, Obj.count(sequences) - 1 do
+            local seq = sequences[i]
+            if seq and asActivePlayback(seq) then
+                return seq
+            end
+        end
+        return nil
+    end
+    -- ───────────────────────────────────────────────────────────
+
     while true do
 
-        local ok, currSeq = pcall(SelectedSequence)
+        local ok, currSeq = pcall(findRunningSequence)
         if not ok then currSeq = nil end
 
         if currSeq ~= prevSeq then
